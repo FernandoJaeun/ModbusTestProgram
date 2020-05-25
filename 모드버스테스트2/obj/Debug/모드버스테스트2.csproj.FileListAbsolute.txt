@@ -1,0 +1,15 @@
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\bin\Debug\모드버스테스트2.exe.config
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\bin\Debug\모드버스테스트2.exe
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\bin\Debug\모드버스테스트2.pdb
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.csprojAssemblyReference.cache
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.Form1.resources
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.Form2.resources
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.Properties.Resources.resources
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.csproj.GenerateResource.cache
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.csproj.CoreCompileInputs.cache
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.exe
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.pdb
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\bin\Debug\EasyModbus.dll
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\obj\Debug\모드버스테스트2.csproj.CopyComplete
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\bin\Debug\System.IO.Ports.dll
+C:\Users\LeeJaeYun\source\repos\모드버스테스트2\모드버스테스트2\bin\Debug\System.IO.Ports.xml
