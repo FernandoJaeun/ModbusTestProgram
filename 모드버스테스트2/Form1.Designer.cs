@@ -31,24 +31,18 @@
             this.SetComPort = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FuncCodeList = new System.Windows.Forms.ComboBox();
-            this.RTUQuantity = new System.Windows.Forms.TextBox();
-            this.RTUSlaveID = new System.Windows.Forms.TextBox();
-            this.RTUStartAdrs = new System.Windows.Forms.TextBox();
+            this.Quantity = new System.Windows.Forms.TextBox();
+            this.SlaveID = new System.Windows.Forms.TextBox();
+            this.StartAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.ReadData = new System.Windows.Forms.Button();
             this.TimerOFF = new System.Windows.Forms.Button();
-            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ParityStop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BaudRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FuncCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SlaveNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RealDataChat = new System.Windows.Forms.DataGridView();
+            this.MBDataList = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RealDataChat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBDataList)).BeginInit();
             this.SuspendLayout();
             // 
             // SetComPort
@@ -65,9 +59,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.FuncCodeList);
-            this.groupBox1.Controls.Add(this.RTUQuantity);
-            this.groupBox1.Controls.Add(this.RTUSlaveID);
-            this.groupBox1.Controls.Add(this.RTUStartAdrs);
+            this.groupBox1.Controls.Add(this.Quantity);
+            this.groupBox1.Controls.Add(this.SlaveID);
+            this.groupBox1.Controls.Add(this.StartAddress);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
@@ -77,7 +71,7 @@
             this.groupBox1.Size = new System.Drawing.Size(269, 159);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "RTU Address";
+            this.groupBox1.Text = "여기서 슬레이브를 지정하세요";
             // 
             // FuncCodeList
             // 
@@ -88,26 +82,29 @@
             this.FuncCodeList.Size = new System.Drawing.Size(121, 25);
             this.FuncCodeList.TabIndex = 3;
             // 
-            // RTUQuantity
+            // Quantity
             // 
-            this.RTUQuantity.Location = new System.Drawing.Point(138, 127);
-            this.RTUQuantity.Name = "RTUQuantity";
-            this.RTUQuantity.Size = new System.Drawing.Size(121, 25);
-            this.RTUQuantity.TabIndex = 2;
+            this.Quantity.Location = new System.Drawing.Point(138, 127);
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Size = new System.Drawing.Size(121, 25);
+            this.Quantity.TabIndex = 2;
+            this.Quantity.Text = "1";
             // 
-            // RTUSlaveID
+            // SlaveID
             // 
-            this.RTUSlaveID.Location = new System.Drawing.Point(138, 34);
-            this.RTUSlaveID.Name = "RTUSlaveID";
-            this.RTUSlaveID.Size = new System.Drawing.Size(121, 25);
-            this.RTUSlaveID.TabIndex = 2;
+            this.SlaveID.Location = new System.Drawing.Point(138, 34);
+            this.SlaveID.Name = "SlaveID";
+            this.SlaveID.Size = new System.Drawing.Size(121, 25);
+            this.SlaveID.TabIndex = 2;
+            this.SlaveID.Text = "1";
             // 
-            // RTUStartAdrs
+            // StartAddress
             // 
-            this.RTUStartAdrs.Location = new System.Drawing.Point(138, 96);
-            this.RTUStartAdrs.Name = "RTUStartAdrs";
-            this.RTUStartAdrs.Size = new System.Drawing.Size(121, 25);
-            this.RTUStartAdrs.TabIndex = 2;
+            this.StartAddress.Location = new System.Drawing.Point(138, 96);
+            this.StartAddress.Name = "StartAddress";
+            this.StartAddress.Size = new System.Drawing.Size(121, 25);
+            this.StartAddress.TabIndex = 2;
+            this.StartAddress.Text = "130";
             // 
             // label1
             // 
@@ -161,83 +158,33 @@
             // 
             // TimerOFF
             // 
-            this.TimerOFF.Location = new System.Drawing.Point(172, 420);
+            this.TimerOFF.Location = new System.Drawing.Point(14, 437);
             this.TimerOFF.Name = "TimerOFF";
-            this.TimerOFF.Size = new System.Drawing.Size(115, 49);
+            this.TimerOFF.Size = new System.Drawing.Size(82, 32);
             this.TimerOFF.TabIndex = 4;
             this.TimerOFF.Text = "읽기 종료";
             this.TimerOFF.UseVisualStyleBackColor = true;
             this.TimerOFF.Click += new System.EventHandler(this.TimerOFF_Click);
             // 
-            // Data
+            // MBDataList
             // 
-            this.Data.HeaderText = "Data";
-            this.Data.MinimumWidth = 6;
-            this.Data.Name = "Data";
-            this.Data.Width = 130;
-            // 
-            // ParityStop
-            // 
-            this.ParityStop.HeaderText = "Parity/Stop";
-            this.ParityStop.MinimumWidth = 6;
-            this.ParityStop.Name = "ParityStop";
-            this.ParityStop.Width = 90;
-            // 
-            // BaudRate
-            // 
-            this.BaudRate.HeaderText = "BaudRate";
-            this.BaudRate.MinimumWidth = 6;
-            this.BaudRate.Name = "BaudRate";
-            this.BaudRate.Width = 80;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.Width = 70;
-            // 
-            // FuncCode
-            // 
-            this.FuncCode.HeaderText = "Func";
-            this.FuncCode.MinimumWidth = 6;
-            this.FuncCode.Name = "FuncCode";
-            this.FuncCode.Width = 50;
-            // 
-            // SlaveNum
-            // 
-            this.SlaveNum.FillWeight = 50F;
-            this.SlaveNum.HeaderText = "Slave Number";
-            this.SlaveNum.MinimumWidth = 6;
-            this.SlaveNum.Name = "SlaveNum";
-            this.SlaveNum.Width = 70;
-            // 
-            // RealDataChat
-            // 
-            this.RealDataChat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RealDataChat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SlaveNum,
-            this.FuncCode,
-            this.Address,
-            this.BaudRate,
-            this.ParityStop,
-            this.Data});
-            this.RealDataChat.Location = new System.Drawing.Point(295, 18);
-            this.RealDataChat.Name = "RealDataChat";
-            this.RealDataChat.RowHeadersWidth = 51;
-            this.RealDataChat.RowTemplate.Height = 27;
-            this.RealDataChat.Size = new System.Drawing.Size(586, 451);
-            this.RealDataChat.TabIndex = 2;
+            this.MBDataList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MBDataList.Location = new System.Drawing.Point(293, 19);
+            this.MBDataList.Name = "MBDataList";
+            this.MBDataList.RowHeadersWidth = 51;
+            this.MBDataList.RowTemplate.Height = 27;
+            this.MBDataList.Size = new System.Drawing.Size(540, 224);
+            this.MBDataList.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 481);
+            this.ClientSize = new System.Drawing.Size(844, 481);
+            this.Controls.Add(this.MBDataList);
             this.Controls.Add(this.TimerOFF);
             this.Controls.Add(this.ReadData);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.RealDataChat);
             this.Controls.Add(this.SetComPort);
             this.Font = new System.Drawing.Font("나눔바른고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "Form1";
@@ -246,7 +193,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RealDataChat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBDataList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,21 +204,16 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox RTUQuantity;
-        private System.Windows.Forms.TextBox RTUStartAdrs;
+        private System.Windows.Forms.TextBox Quantity;
+        private System.Windows.Forms.TextBox StartAddress;
         private System.Windows.Forms.ComboBox FuncCodeList;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ReadData;
-        private System.Windows.Forms.TextBox RTUSlaveID;
+        private System.Windows.Forms.TextBox SlaveID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button TimerOFF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ParityStop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BaudRate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FuncCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SlaveNum;
-        private System.Windows.Forms.DataGridView RealDataChat;
+        private System.Windows.Forms.DataGridView MBDataList;
+        private System.Windows.Forms.TextBox IPAddressProp;
     }
 }
 

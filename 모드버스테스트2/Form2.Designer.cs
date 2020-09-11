@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.RTUChoice = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,19 +46,19 @@
             this.CommStatus = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TimeOutprop = new System.Windows.Forms.MaskedTextBox();
-            this.Portprop = new System.Windows.Forms.TextBox();
-            this.IPAddressprop = new System.Windows.Forms.MaskedTextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.IPPortprop = new System.Windows.Forms.TextBox();
+            this.TCPIPChoice = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.IPAddressProp = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.RTUChoice);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -75,16 +75,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton1
+            // RTUChoice
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(126, 19);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.Text = " RTU 통신설정";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
+            this.RTUChoice.AutoSize = true;
+            this.RTUChoice.Location = new System.Drawing.Point(6, 0);
+            this.RTUChoice.Name = "RTUChoice";
+            this.RTUChoice.Size = new System.Drawing.Size(126, 19);
+            this.RTUChoice.TabIndex = 2;
+            this.RTUChoice.Text = " RTU 통신설정";
+            this.RTUChoice.UseVisualStyleBackColor = true;
+            this.RTUChoice.Click += new System.EventHandler(this.RTUChoice_Click);
             // 
             // label5
             // 
@@ -147,7 +147,6 @@
             this.StopBitprop.Name = "StopBitprop";
             this.StopBitprop.Size = new System.Drawing.Size(63, 23);
             this.StopBitprop.TabIndex = 1;
-            this.StopBitprop.SelectedIndexChanged += new System.EventHandler(this.StopBitprop_SelectedIndexChanged);
             // 
             // Parityprop
             // 
@@ -160,7 +159,6 @@
             this.Parityprop.Name = "Parityprop";
             this.Parityprop.Size = new System.Drawing.Size(63, 23);
             this.Parityprop.TabIndex = 1;
-            this.Parityprop.SelectedIndexChanged += new System.EventHandler(this.Parityprop_SelectedIndexChanged);
             // 
             // DataBitprop
             // 
@@ -171,7 +169,6 @@
             this.DataBitprop.Name = "DataBitprop";
             this.DataBitprop.Size = new System.Drawing.Size(79, 23);
             this.DataBitprop.TabIndex = 1;
-            this.DataBitprop.SelectedIndexChanged += new System.EventHandler(this.DataBitprop_SelectedIndexChanged);
             // 
             // BaudRateProp
             // 
@@ -184,7 +181,6 @@
             this.BaudRateProp.Name = "BaudRateProp";
             this.BaudRateProp.Size = new System.Drawing.Size(74, 23);
             this.BaudRateProp.TabIndex = 1;
-            this.BaudRateProp.SelectedIndexChanged += new System.EventHandler(this.BaudRateProp_SelectedIndexChanged);
             // 
             // COMprop
             // 
@@ -197,7 +193,6 @@
             this.COMprop.Name = "COMprop";
             this.COMprop.Size = new System.Drawing.Size(85, 23);
             this.COMprop.TabIndex = 1;
-            this.COMprop.SelectedIndexChanged += new System.EventHandler(this.COMprop_SelectedIndexChanged);
             // 
             // SaveConfig
             // 
@@ -233,15 +228,15 @@
             this.CommStatus.BackColor = System.Drawing.SystemColors.ControlLight;
             this.CommStatus.Location = new System.Drawing.Point(80, 283);
             this.CommStatus.Name = "CommStatus";
-            this.CommStatus.Size = new System.Drawing.Size(96, 25);
+            this.CommStatus.Size = new System.Drawing.Size(124, 25);
             this.CommStatus.TabIndex = 3;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.IPAddressProp);
             this.groupBox2.Controls.Add(this.TimeOutprop);
-            this.groupBox2.Controls.Add(this.Portprop);
-            this.groupBox2.Controls.Add(this.IPAddressprop);
-            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.IPPortprop);
+            this.groupBox2.Controls.Add(this.TCPIPChoice);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
@@ -254,50 +249,40 @@
             // TimeOutprop
             // 
             this.TimeOutprop.Enabled = false;
-            this.TimeOutprop.Location = new System.Drawing.Point(351, 59);
-            this.TimeOutprop.Mask = "9999  ms";
+            this.TimeOutprop.Location = new System.Drawing.Point(340, 59);
+            this.TimeOutprop.Mask = "#000";
             this.TimeOutprop.Name = "TimeOutprop";
             this.TimeOutprop.Size = new System.Drawing.Size(100, 25);
             this.TimeOutprop.TabIndex = 5;
+            this.TimeOutprop.Text = "1000";
             this.TimeOutprop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Portprop
+            // IPPortprop
             // 
-            this.Portprop.Enabled = false;
-            this.Portprop.Location = new System.Drawing.Point(263, 59);
-            this.Portprop.Name = "Portprop";
-            this.Portprop.Size = new System.Drawing.Size(82, 25);
-            this.Portprop.TabIndex = 4;
-            this.Portprop.Text = "502";
-            this.Portprop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.IPPortprop.Enabled = false;
+            this.IPPortprop.Location = new System.Drawing.Point(252, 59);
+            this.IPPortprop.Name = "IPPortprop";
+            this.IPPortprop.Size = new System.Drawing.Size(82, 25);
+            this.IPPortprop.TabIndex = 4;
+            this.IPPortprop.Text = "502";
+            this.IPPortprop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // IPAddressprop
+            // TCPIPChoice
             // 
-            this.IPAddressprop.Enabled = false;
-            this.IPAddressprop.Location = new System.Drawing.Point(11, 59);
-            this.IPAddressprop.Mask = "  000   .   000   .   000   .   000      ";
-            this.IPAddressprop.Name = "IPAddressprop";
-            this.IPAddressprop.Size = new System.Drawing.Size(246, 25);
-            this.IPAddressprop.TabIndex = 3;
-            this.IPAddressprop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.IPAddressprop.TextChanged += new System.EventHandler(this.IPAddressprop_TextChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(150, 19);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.Text = " TCP/ IP 통신설정";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
+            this.TCPIPChoice.AutoSize = true;
+            this.TCPIPChoice.Location = new System.Drawing.Point(6, 0);
+            this.TCPIPChoice.Name = "TCPIPChoice";
+            this.TCPIPChoice.Size = new System.Drawing.Size(150, 19);
+            this.TCPIPChoice.TabIndex = 2;
+            this.TCPIPChoice.Text = " TCP/ IP 통신설정";
+            this.TCPIPChoice.UseVisualStyleBackColor = true;
+            this.TCPIPChoice.Click += new System.EventHandler(this.TCPIPChoice_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Enabled = false;
-            this.label9.Location = new System.Drawing.Point(348, 41);
+            this.label9.Location = new System.Drawing.Point(337, 41);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 15);
             this.label9.TabIndex = 1;
@@ -307,7 +292,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Enabled = false;
-            this.label10.Location = new System.Drawing.Point(260, 41);
+            this.label10.Location = new System.Drawing.Point(249, 41);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 15);
             this.label10.TabIndex = 1;
@@ -317,11 +302,20 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Enabled = false;
-            this.label11.Location = new System.Drawing.Point(8, 41);
+            this.label11.Location = new System.Drawing.Point(27, 41);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(78, 15);
             this.label11.TabIndex = 1;
             this.label11.Text = "IP Address";
+            // 
+            // IPAddressProp
+            // 
+            this.IPAddressProp.Enabled = false;
+            this.IPAddressProp.Location = new System.Drawing.Point(30, 59);
+            this.IPAddressProp.Name = "IPAddressProp";
+            this.IPAddressProp.Size = new System.Drawing.Size(180, 25);
+            this.IPAddressProp.TabIndex = 6;
+            this.IPAddressProp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form2
             // 
@@ -336,7 +330,7 @@
             this.Controls.Add(this.label6);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form2 : Window for Setting";
+            this.Text = "Form2 : Communication Port Setting";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -364,14 +358,14 @@
         private System.Windows.Forms.Button CloseForm2;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox CommStatus;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton RTUChoice;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox Portprop;
-        private System.Windows.Forms.MaskedTextBox IPAddressprop;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox IPPortprop;
+        private System.Windows.Forms.RadioButton TCPIPChoice;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.MaskedTextBox TimeOutprop;
+        private System.Windows.Forms.TextBox IPAddressProp;
     }
 }
